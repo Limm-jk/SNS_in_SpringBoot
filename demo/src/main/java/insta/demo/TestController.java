@@ -163,4 +163,13 @@ public class TestController{
 		return follows;
 	}
 
+	@GetMapping("/test/login")
+	public String testLogin(){
+		return "auth/login";
+	}
+
+	@GetMapping("/test/login")
+	public String testHoin(){
+		return "auth/join";
+	}
 }

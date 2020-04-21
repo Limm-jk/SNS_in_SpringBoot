@@ -1,10 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login | Gamsung-gram</title>
+  <title>Login | Jejugram</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -18,10 +21,12 @@
     <div class="login__column">
       <div class="login__box">
         <img src="images/loginLogo.png" />
-        <form action="feed.html" method="get" class="login__form">
+        <form action="feed.html" method="post" class="login__form">
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="name" placeholder="Name" required>
           <input type="text" name="username" placeholder="Username" required>
           <input type="password" name="password" placeholder="Password" required>
-          <input type="submit" value="Log in">
+          <input type="submit" value="Sign up">
         </form>
         <span class="login__divider">
           or
@@ -61,7 +66,7 @@
         <li class="footer__item"><a href="#" class="footer__link">Language</a></li>
       </ul>
     </nav>
-    <span class="footer__copyright">© 2020 Gamsung-gram</span>
+    <span class="footer__copyright">© 2017 jejugram</span>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/app.js"></script>
