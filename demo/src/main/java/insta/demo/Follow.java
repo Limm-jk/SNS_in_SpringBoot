@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.Data;
@@ -28,11 +30,13 @@ public class Follow {
     //
     @ManyToOne
     @JoinColumn(name = "fromUserId")
+    @JsonIgnoreProperties({"images"})
     private User fromUser;
 
     @ManyToOne
     @JoinColumn(name = "toUserId")
-    private  User toUser;
+    @JsonIgnoreProperties({"images"})
+    private User toUser;
 
     @Transient
     private boolean matpal;
