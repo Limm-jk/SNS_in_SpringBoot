@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.Data;
-import lombok.Setter;
 
 @Entity
 @Data

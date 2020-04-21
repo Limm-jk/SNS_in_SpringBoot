@@ -117,6 +117,50 @@ public class TestController{
 		
 		return like;
 	}
+	@GetMapping("/test/follows")
+	public @ResponseBody List<Follow> getFollows() {
+		User user1 = new User();
+		user1.setId(1);
+		user1.setUsername("cos");
+		user1.setName("홍길동");
+		user1.setEmail("cos@nate.com");
+		user1.setProfileImage("my.jpg");	
+		
+		User user2 = new User();
+		user2.setId(2);
+		user2.setUsername("ssar");
+		user2.setName("최예나");
+		user2.setEmail("duckduck@nate.com");
+		user2.setProfileImage("Yena.jpg");
 
+		User user3 = new User();
+		user3.setId(3);
+		user3.setUsername("joq");
+		user3.setName("조");
+		user3.setEmail("joq@naver.com");
+		user3.setProfileImage("jo.jpg");
+
+		Follow follow1 = new Follow();
+		follow1.setId(1);
+		follow1.setFromUser(user1);
+		follow1.setToUser(user2);
+
+		Follow follow2 = new Follow();
+		follow2.setId(2);
+		follow2.setFromUser(user1);
+		follow2.setToUser(user3);
+
+		Follow follow3 = new Follow();
+		follow3.setId(3);
+		follow3.setFromUser(user2);
+		follow3.setToUser(user1);
+
+		List<Follow> follows = new ArrayList<>();
+		follows.add(follow1);
+		follows.add(follow2);
+		follows.add(follow3);
+
+		return follows;
+	}
 
 }
