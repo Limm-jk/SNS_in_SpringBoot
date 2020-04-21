@@ -10,17 +10,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.Data;
+import lombok.Setter;
 
-@Data
 @Entity
+@Data
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;//시퀀스
+    private int id;
+
     private String username;//아이티
     private String password;//비번
     private String name;//이름
@@ -29,10 +33,12 @@ public class User {
     private String email;
     private String phone;
     private String gender;
+    private String profileImage;//프로파일 사진경로,이름
 
     //1. findById()때만 동작
     //2. findByUserInfo() 제외 
     @OneToMany(mappedBy = "user")
+    @JsonIgnoreProperties({"user"})
     private List<Image> images = new ArrayList<>();
 
     @CreationTimestamp//자동 현재시간 세팅

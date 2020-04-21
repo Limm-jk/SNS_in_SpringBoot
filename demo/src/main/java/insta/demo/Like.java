@@ -2,6 +2,7 @@ package insta.demo;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.Data;
+
+@Entity
+@Data
 public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,12 +24,13 @@ public class Like {
     
     @ManyToOne
     @JoinColumn(name = "userId")
-    @JsonIgnoreProperties({"password"})//보안
-    private User user; // 소유자
+    @JsonIgnoreProperties({"password","name","website","bio","email","phone","gender","createDate","updateDate"})
+    private User user; // id,username,profileImage
 
     @ManyToOne
     @JoinColumn(name = "imageId")
-    private Image image;
+    @JsonIgnoreProperties({"user","likes"})
+    private Image image;//기본 imageid
 
     @CreationTimestamp//자동 현재시간 세팅
     private Timestamp createDate;
