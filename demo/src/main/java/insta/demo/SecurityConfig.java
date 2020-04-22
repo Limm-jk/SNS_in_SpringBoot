@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 		http.cors().disable();
 		http.authorizeRequests()
-		.antMatchers("/user/**", "/follow/**", "/images/**")
+		.antMatchers("/user/**", "/follow/**")
 		.authenticated()
 		.anyRequest()
 		.permitAll()
@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
-	// 내가 인코딩하는게 아니라, 어떤 인코딩으로 패스워드가 만들어졌는지 알려주는 거야!!
+	// 인코딩하는게 아니라, 어떤 인코딩으로 패스워드가 만들어졌는지 알려줌
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(encodePWD());

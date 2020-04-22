@@ -168,8 +168,13 @@ public class TestController{
 		return "auth/login";
 	}
 
-	@GetMapping("/test/login")
-	public String testHoin(){
+	@GetMapping("/test/join")
+	public String testJoin(){
 		return "auth/join";
+	}
+
+	@GetMapping("/test/profile")
+	public String testProfile(){
+		return "user/profile";
 	}
 }

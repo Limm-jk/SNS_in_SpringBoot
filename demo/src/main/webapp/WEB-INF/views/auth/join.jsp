@@ -10,17 +10,17 @@
   <title>Login | Jejugram</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <main id="login">
     <div class="login__column">
-      <img src="images/phoneImage.png" />
+      <img src="/images/phoneImage.png" />
     </div>
     <div class="login__column">
       <div class="login__box">
-        <img src="images/loginLogo.png" />
+        <img src="/images/loginLogo.png" />
         <form action="feed.html" method="post" class="login__form">
           <input type="email" name="email" placeholder="Email" required>
           <input type="text" name="name" placeholder="Name" required>
@@ -45,30 +45,13 @@
           Get the app.
         </span>
         <div class="login__appstores">
-          <img src="images/ios.png" class="login__appstore" />
-          <img src="images/android.png" class="login__appstore" />
+          <img src="/images/ios.png" class="login__appstore" />
+          <img src="/images/android.png" class="login__appstore" />
         </div>
       </div>
     </div>
   </main>
-  <footer>
-    <nav class="footer__nav">
-      <ul class="footer__list">
-        <li class="footer__item"><a href="#" class="footer__link">About us</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Support</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Press</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Api</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Jobs</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Directory</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Language</a></li>
-      </ul>
-    </nav>
-    <span class="footer__copyright">© 2017 jejugram</span>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="js/app.js"></script>
+
+  <%@include file="../include/footer.jsp"%>
 </body>
 </html>
