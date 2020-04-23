@@ -163,12 +163,12 @@ public class TestController{
 		return follows;
 	}
 
-	@GetMapping("/test/login")
+	@GetMapping("/auth/login")
 	public String testLogin(){
 		return "auth/login";
 	}
 
-	@GetMapping("/test/join")
+	@GetMapping("/auth/join")
 	public String testJoin(){
 		return "auth/join";
 	}
@@ -176,5 +176,13 @@ public class TestController{
 	@GetMapping("/test/profile")
 	public String testProfile(){
 		return "user/profile";
+	}
+	@GetMapping("/test/profile_edit")
+	public String testProfile_edit(){
+		return "user/profile_edit";
+	}
+	@GetMapping("/test/profile")
+	public String testFeed(){
+		return "image/feed";
 	}
 }

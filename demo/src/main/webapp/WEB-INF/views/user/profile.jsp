@@ -8,30 +8,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Profile | Jejugram</title>
+  <title>Profile | Gamsung-gram</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/modal.css">
 </head>
 
 <body>
-  <nav class="navigation">
-    <a href="feed.html">
-      <img src="/images/logo.png" />
-    </a>
-    <input type="text" placeholder="Search">
-    <div class="navigation__links">
-      <a href="explore.html" class="navigation__link">
-        <i class="fa fa-compass"></i>
-      </a>
-      <a href="#" class="navigation__link follow_popup">
-        <i class="fa fa-heart-o"></i>
-      </a>
-      <a href="profile.html" class="navigation__link">
-        <i class="fa fa-user-o"></i>
-      </a>
-    </div>
-  </nav>
+
+  <%@include file="../include/nav.jsp"%>
   <main id="profile">
     <header class="profile__header">
       <div class="avatar__container">
@@ -42,7 +28,7 @@
       </div>
       <div class="profile__info">
         <div class="profile__title">
-          <h1>serranoarevalo</h1>
+          <h1>최유나</h1>
           <a href="edit-profile.html">
             <button>Edit Profile</button>
           </a>
@@ -60,12 +46,9 @@
           </li>
         </ul>
         <p class="profile__bio">
-          <span class="profile__fullname">Nicolás Serrano Arévalo</span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Voluptas repellendus cumque quo voluptatum voluptatem,
-          maxime nobis. Quae incidunt cum expedita facilis libero officiis,
-          delectus inventore tempore, ex nulla dolore cumque.
-          <a href="http://serranoarevalo.com" class="profile__link">serranoarevalo.com</a>
+          <span class="profile__fullname">피자먹고싶다</span>
+          컴.공.시.러 시공조아 컴공시러 시공시러
+          <a href="http://serranoarevalo.com" class="profile__link">깃허브</a>
         </p>
       </div>
     </header>
@@ -79,7 +62,7 @@
                 <i class="fa fa-heart"></i> 504
               </span>
               <span class="profile__photo-stat">
-                <i class="fa fa-comment"></i> 22
+                <i class="fa fa-comment"></i> 21
               </span>
             </div>
           </a>
@@ -195,23 +178,7 @@
       </div>
     </div>
   </main>
-  <footer>
-    <nav class="footer__nav">
-      <ul class="footer__list">
-        <li class="footer__item"><a href="#" class="footer__link">About us</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Support</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Press</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Api</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Jobs</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Directory</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Language</a></li>
-      </ul>
-    </nav>
-    <span class="footer__copyright">© 2017 jejugram</span>
-  </footer>
+  
   <div class="profile__overlay">
     <i class="fa fa-times"></i>
     <div class="profile__overlay-container">
@@ -222,8 +189,8 @@
       <a href="#" class="profile__overlay-link" id="cancel">Cancel</a>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="/js/app.js"></script>
+
+  <%@include file="../include/footer.jsp"%>
 
   <script>
       $(function() {
