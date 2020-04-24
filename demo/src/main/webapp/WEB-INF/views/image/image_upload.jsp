@@ -12,9 +12,11 @@
 	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
 	crossorigin="anonymous">
-  <link rel="stylesheet" href="css/image-upload.css">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/image-upload.css">
 </head>
 <body>
+	<%@include file="../include/nav.jsp"%>
 	<div class="container">
 		<div class="box">
 			<div class="bigbox">
@@ -66,7 +68,7 @@
 		</div>
 	</div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <%@include file="../include/footer.jsp"%>
   <script>
     var sel_file;
     $(document).ready(function() {
@@ -77,7 +79,7 @@
       var filesArr = Array.prototype.slice.call(files);
       filesArr.forEach(function(f) {
         if (!f.type.match("image.*")) {
-          alert("확장자는 이미지 확장자만 가능합니다.");
+          alert("확장자는 이미지 확장자만 코딩하기 싫습니다.");
           return;
         }
         sel_file = f;
