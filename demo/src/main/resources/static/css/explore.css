@@ -64,7 +64,7 @@
   color: #999;
 }
 
-.explore__user .follow_btn {
+.explore__user button {
   border: 1px solid #3897f0;
   border-radius: 3px;
   color: white;
@@ -76,16 +76,9 @@
   transition: all .5s ease-in-out;
 }
 
-.explore__user .following_btn {
-  border: 1px solid #3897f0;
-  border-radius: 3px;
-  color: black;
-  font-weight: 600;
+.explore__user button:hover {
   background: white;
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all .5s ease-in-out;
+  color: #3897f0;
 }
 
 .explore__user button:focus {
