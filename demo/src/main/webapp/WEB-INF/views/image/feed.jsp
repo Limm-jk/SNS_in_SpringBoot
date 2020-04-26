@@ -82,9 +82,7 @@
       </div>
     </div>
   </main>
-
-
- 
+  
   <%@include file="../include/footer.jsp"%>
 </body>
 </html>

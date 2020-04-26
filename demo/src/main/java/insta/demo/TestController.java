@@ -181,8 +181,12 @@ public class TestController{
 	public String testProfile_edit(){
 		return "user/profile_edit";
 	}
-	@GetMapping("/test/profile")
+	@GetMapping("/test/feed")
 	public String testFeed(){
 		return "image/feed";
+	}
+	@GetMapping("/test/upload")
+	public String testUpload(){
+		return "image/image_upload";
 	}
 }
