@@ -39,6 +39,5 @@ public class UserController {
         mUserRepository.save(user);
 
         return "redirect:/auth/login";
-
     }
 }
