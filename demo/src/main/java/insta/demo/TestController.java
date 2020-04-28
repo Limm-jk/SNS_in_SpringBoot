@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
+@Controller
 public class TestController{
 
     @GetMapping("/test/home")
@@ -163,12 +163,12 @@ public class TestController{
 		return follows;
 	}
 
-	@GetMapping("/auth/login")
+	@GetMapping("/test/login")
 	public String testLogin(){
 		return "auth/login";
 	}
 
-	@GetMapping("/auth/join")
+	@GetMapping("/test/join")
 	public String testJoin(){
 		return "auth/join";
 	}
@@ -188,5 +188,9 @@ public class TestController{
 	@GetMapping("/test/upload")
 	public String testUpload(){
 		return "image/image_upload";
+	}
+	@GetMapping("/test/explore")
+	public String testExplore(){
+		return "image/explore";
 	}
 }

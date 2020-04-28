@@ -4,18 +4,18 @@
 <%-- 표준 라이브러리 태그 --%>
 
 <nav class="navigation">
-    <a href="feed.html">
+    <a href="/image/feed">
       <img src="/images/logo.png" />
     </a>
     <input type="text" placeholder="Search">
     <div class="navigation__links">
-      <a href="explore.html" class="navigation__link">
+      <a href="/test/explore" class="navigation__link">
           <i class="fa fa-compass"></i>
       </a>
       <a href="#" class="navigation__link follow_popup">
           <i class="fa fa-heart-o"></i>
       </a>
-      <a href="profile.html" class="navigation__link">
+      <a href="/test/profile" class="navigation__link">
           <i class="fa fa-user-o"></i>
       </a>
     </div>
