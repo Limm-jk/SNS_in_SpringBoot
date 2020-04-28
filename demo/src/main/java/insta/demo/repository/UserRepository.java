@@ -1,6 +1,8 @@
-package insta.demo;
+package insta.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import insta.demo.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer>{
 	User findByUsername(String username);

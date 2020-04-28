@@ -1,4 +1,4 @@
-package insta.demo;
+package insta.demo.model;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

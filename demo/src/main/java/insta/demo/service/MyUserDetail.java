@@ -1,10 +1,11 @@
-package insta.demo;
+package insta.demo.service;
 
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import insta.demo.model.User;
 import lombok.Data;
 
 @Data

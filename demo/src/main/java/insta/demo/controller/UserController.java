@@ -1,4 +1,4 @@
-package insta.demo;
+package insta.demo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import insta.demo.model.User;
+import insta.demo.repository.UserRepository;
+
 
 @Controller
 public class UserController {
@@ -40,4 +46,13 @@ public class UserController {
 
         return "redirect:/auth/login";
     }
+
+    @GetMapping("/user/{id}")
+    public String user(@PathVariable int id) {
+
+        // id를 통해서 유저 검색
+
+        return "user/profile";
+    }
+    
 }

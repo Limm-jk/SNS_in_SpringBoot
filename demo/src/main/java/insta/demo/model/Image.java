@@ -5,7 +5,7 @@
  * @modify date 2020-04-20 21:35:00
  * @desc [insta_ImageData]
  */
-package insta.demo;
+package insta.demo.model;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
