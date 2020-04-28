@@ -2,14 +2,27 @@ package insta.demo.test;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import insta.demo.model.*;
+import insta.demo.repository.UserRepository;
 
 @Controller
 public class TestController{
+
+	@Autowired
+	private UserRepository mUserRepository;
+
+	@GetMapping("/test/user/{id}")
+    public @ResponseBody User testUser(@PathVariable int id) {
+		Optional<User> ouser = mUserRepository.findById(id);
+		User user = ouser.get();
+		return user;
+    }
 
     @GetMapping("/test/home")
     public String testHome(){
@@ -195,4 +208,5 @@ public class TestController{
 	public String testExplore(){
 		return "image/explore";
 	}
+
 }
