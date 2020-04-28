@@ -32,6 +32,9 @@
           <a href="/test/profile_edit">
             <button class="profile_follow_btn">Follow</button>
           </a>
+          <a href="/test/profile_edit">
+            <button class="profile_edit_btn">Edit Profile</button>
+          </a>
           <i class="fa fa-cog fa-lg"></i>
         </div>
         <ul class="profile__stats">
