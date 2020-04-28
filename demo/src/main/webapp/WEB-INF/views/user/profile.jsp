@@ -29,8 +29,8 @@
       <div class="profile__info">
         <div class="profile__title">
           <h1>최유나</h1>
-          <a href="edit-profile.html">
-            <button>Edit Profile</button>
+          <a href="/test/profile_edit">
+            <button class="profile_follow_btn">Follow</button>
           </a>
           <i class="fa fa-cog fa-lg"></i>
         </div>
@@ -185,7 +185,7 @@
       <a href="#" class="profile__overlay-link">Change password</a>
       <a href="#" class="profile__overlay-link">Authorize Apps</a>
       <a href="#" class="profile__overlay-link">Notifications</a>
-      <a href="#" class="profile__overlay-link" id="logout">Log Out</a>
+      <a href="/logout" class="profile__overlay-link" id="logout">Log Out</a>
       <a href="#" class="profile__overlay-link" id="cancel">Cancel</a>
     </div>
   </div>
